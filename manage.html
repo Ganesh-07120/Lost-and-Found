@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Reports</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="logo" href="index.html">Lost <span>&</span> Found</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a><a href="lost.html">Report Lost</a><a href="found.html">Report Found</a>
+      <a href="items.html">View Items</a><a class="active" href="manage.html">Manage</a>
+      <button class="logout-btn" onclick="logoutUser()">Logout ↗</button>
+    <a href="notifications.html">Notifications <span id="notificationBadge" class="notification-badge"></span></a><a href="profile.html">Profile</a></div>
+  </nav>
+  <header class="page-header"><span class="eyebrow">CONTROL DESK / 04</span><h1>Manage Reports</h1><p>Mark reports as resolved or remove them.</p></header>
+  <main class="items-container">
+    <div class="manage-note">Changes are saved in this browser's local storage.</div>
+    <div id="manageList" class="item-grid"><p class="empty-state">Loading reports…</p></div>
+    <a href="index.html" class="back-link">← Back to home</a>
+  </main>
+  <footer class="home-footer"><p>Lost & Found Management System</p><span>Created by Ganesh Dubey</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

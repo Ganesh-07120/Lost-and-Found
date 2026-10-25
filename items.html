@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost & Found Items</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="logo" href="index.html">Lost <span>&</span> Found</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a><a href="lost.html">Report Lost</a><a href="found.html">Report Found</a>
+      <a class="active" href="items.html">View Items</a><a href="manage.html">Manage</a>
+      <button class="logout-btn" onclick="logoutUser()">Logout ↗</button>
+    <a href="notifications.html">Notifications <span id="notificationBadge" class="notification-badge"></span></a><a href="profile.html">Profile</a></div>
+  </nav>
+  <header class="page-header"><span class="eyebrow">DIRECTORY / 03</span><h1>Lost & Found Items</h1><p>Search reports and find the right item.</p></header>
+  <main class="items-container">
+    <div class="search-section">
+      <label class="sr-only" for="searchInput">Search reports</label>
+      <input type="search" id="searchInput" placeholder="Search by name, category or location...">
+      <label class="sr-only" for="typeFilter">Filter reports by type</label>
+      <select id="typeFilter"><option value="All">All reports</option><option value="Lost">Lost items</option><option value="Found">Found items</option></select>
+    </div>
+    <p class="results-note">Tip: search for an item name, category, or location.</p>
+    <div id="itemsList" class="item-grid"><p class="empty-state">Loading reports…</p></div>
+    <a href="index.html" class="back-link">← Back to home</a>
+  </main>
+  <footer class="home-footer"><p>Lost & Found Management System</p><span>Created by Ganesh Dubey</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

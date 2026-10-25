@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Lost Item</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="logo" href="index.html">Lost <span>&</span> Found</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a><a class="active" href="lost.html">Report Lost</a>
+      <a href="found.html">Report Found</a><a href="items.html">View Items</a><a href="manage.html">Manage</a>
+      <button class="logout-btn" onclick="logoutUser()">Logout ↗</button>
+    <a href="notifications.html">Notifications <span id="notificationBadge" class="notification-badge"></span></a><a href="profile.html">Profile</a></div>
+  </nav>
+  <header class="page-header"><span class="eyebrow">REPORT / 01</span><h1>Report Lost Item</h1><p>Tell us about the item you're trying to find.</p></header>
+  <main class="form-container">
+    <div class="form-ribbon">✦ LOST ITEM FORM ✦</div>
+    <form id="lostForm">
+      <label for="itemName">Item name</label><input id="itemName" maxlength="150" placeholder="e.g. Black wallet" required>
+      <label for="category">Category</label>
+      <select id="category" required><option value="">Select category</option><option>Mobile</option><option>Wallet</option><option>Bag</option><option>Keys</option><option>Documents</option><option>Electronics</option><option>Other</option></select>
+      <label for="location">Lost location</label><input id="location" maxlength="200" placeholder="e.g. College campus" required>
+      <label for="dateLost">Date lost</label><input type="date" id="dateLost" required>
+      <label for="itemImage">Item image (optional, max 2 MB)</label><input type="file" id="itemImage" accept="image/png,image/jpeg,image/webp,image/gif">
+      <div id="imagePreview" class="image-preview"><span>No image selected</span></div>
+      <label for="description">Description</label><textarea id="description" maxlength="3000" placeholder="Describe identifying details..." required></textarea>
+      <label for="contact">Contact number</label><input type="tel" id="contact" maxlength="25" placeholder="Enter contact number" required>
+      <button class="primary-btn" type="submit">Submit Lost Report <span>↗</span></button>
+      <p class="form-message" id="lostMessage" role="status"></p>
+    </form>
+    <a href="index.html" class="back-link">← Back to home</a>
+  </main>
+  <footer class="home-footer"><p>Lost & Found Management System</p><span>Created by Ganesh Dubey</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

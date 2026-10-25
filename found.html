@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Found Item</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="logo" href="index.html">Lost <span>&</span> Found</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a><a href="lost.html">Report Lost</a>
+      <a class="active" href="found.html">Report Found</a><a href="items.html">View Items</a><a href="manage.html">Manage</a>
+      <button class="logout-btn" onclick="logoutUser()">Logout ↗</button>
+    <a href="notifications.html">Notifications <span id="notificationBadge" class="notification-badge"></span></a><a href="profile.html">Profile</a></div>
+  </nav>
+  <header class="page-header"><span class="eyebrow">REPORT / 02</span><h1>Report Found Item</h1><p>Help someone get their belonging back.</p></header>
+  <main class="form-container">
+    <div class="form-ribbon teal-ribbon">✦ FOUND ITEM FORM ✦</div>
+    <form id="foundForm">
+      <label for="foundItemName">Item name</label><input id="foundItemName" maxlength="150" placeholder="e.g. Blue water bottle" required>
+      <label for="foundCategory">Category</label>
+      <select id="foundCategory" required><option value="">Select category</option><option>Mobile</option><option>Wallet</option><option>Bag</option><option>Keys</option><option>Documents</option><option>Electronics</option><option>Other</option></select>
+      <label for="foundLocation">Found location</label><input id="foundLocation" maxlength="200" placeholder="e.g. College library" required>
+      <label for="dateFound">Date found</label><input type="date" id="dateFound" required>
+      <label for="foundItemImage">Item image (optional, max 2 MB)</label><input type="file" id="foundItemImage" accept="image/png,image/jpeg,image/webp,image/gif">
+      <div id="foundImagePreview" class="image-preview"><span>No image selected</span></div>
+      <label for="foundDescription">Description</label><textarea id="foundDescription" maxlength="3000" placeholder="Describe the item..." required></textarea>
+      <label for="foundContact">Contact number</label><input type="tel" id="foundContact" maxlength="25" placeholder="Enter contact number" required>
+      <button class="primary-btn teal-btn" type="submit">Submit Found Report <span>↗</span></button>
+      <p class="form-message" id="foundMessage" role="status"></p>
+    </form>
+    <a href="index.html" class="back-link">← Back to home</a>
+  </main>
+  <footer class="home-footer"><p>Lost & Found Management System</p><span>Created by Ganesh Dubey</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

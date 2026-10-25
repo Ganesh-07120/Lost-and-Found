@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost & Found Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="logo" href="index.html">Lost <span>&</span> Found</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a class="active" href="index.html">Home</a>
+      <a href="lost.html">Report Lost</a>
+      <a href="found.html">Report Found</a>
+      <a href="items.html">View Items</a>
+      <a href="manage.html">Manage</a>
+      <button class="logout-btn" onclick="logoutUser()">Logout ↗</button>
+    <a href="notifications.html">Notifications <span id="notificationBadge" class="notification-badge"></span></a><a href="profile.html">Profile</a></div>
+  </nav>
+
+  <main class="home-container">
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="retro-sticker sticker-lost">LOST!</div>
+        <div class="retro-sticker sticker-found">FOUND<br>IT!</div>
+        <div class="retro-star star-one">✦</div>
+        <div class="retro-star star-two">★</div>
+        <span class="hero-tag">✦ LOST & FOUND PORTAL ✦</span>
+        <h1>Find What You've Lost.<br><span>Return What You've Found.</span></h1>
+        <p>A simple way to report, search and manage lost and found belongings.</p>
+        <div class="home-search">
+          <span class="search-icon">⌕</span>
+          <input type="search" id="homeSearch" placeholder="Search for an item..." aria-label="Search for an item">
+          <span class="search-hint">Press Enter ↵</span>
+        </div>
+        <div class="hero-pills"><span>SEARCH</span><span>REPORT</span><span>RETURN</span></div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <article class="stat-card stat-total"><div class="stat-icon">▦</div><div><h2 id="totalCount">0</h2><p>Total Reports</p></div></article>
+      <article class="stat-card stat-lost"><div class="stat-icon">⌕</div><div><h2 id="lostCount">0</h2><p>Active Lost Items</p></div></article>
+      <article class="stat-card stat-found"><div class="stat-icon">✦</div><div><h2 id="foundCount">0</h2><p>Active Found Items</p></div></article>
+    </section>
+
+    <section class="actions-section">
+      <div class="section-heading"><span>QUICK ACTIONS / 01</span><h2>What would you like to do?</h2></div>
+      <div class="action-grid">
+        <a href="lost.html" class="action-card action-orange"><span class="action-icon">⌕</span><div class="action-content"><h3>Report Lost Item</h3><p>Tell us about something you've lost.</p></div><span class="arrow">↗</span><span class="card-stamp">LOST!</span></a>
+        <a href="found.html" class="action-card action-teal"><span class="action-icon">✦</span><div class="action-content"><h3>Report Found Item</h3><p>Help someone recover a missing belonging.</p></div><span class="arrow">↗</span><span class="card-stamp">HELP!</span></a>
+        <a href="items.html" class="action-card action-purple"><span class="action-icon">▤</span><div class="action-content"><h3>View Reports</h3><p>Search through reported items.</p></div><span class="arrow">↗</span><span class="card-stamp">SEARCH</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="home-footer"><p>Lost & Found Management System</p><span>Created by Ganesh Dubey</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
